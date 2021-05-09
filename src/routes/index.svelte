@@ -1,3 +1,18 @@
+<main>
+	<h1>My Todos</h1>
+	<input type="text" bind:value={text} placeholder="Enter a todo" />
+	<button on:click={addTodo}>Add Todo</button>
+	<br />
+	<ul>
+		{#each todos as todo}
+			<li>
+				<input type="checkbox" bind:checked={todo.completed} on:change={completeTodo(todo)} />
+				{todo.text}
+			</li>
+		{/each}
+	</ul>
+</main>
+
 <script context="module">
 	export async function load({ fetch }) {
 		const res = await fetch('/todos');
@@ -51,18 +66,3 @@
 		todos = jsonRes.todos;
 	}
 </script>
-
-<main>
-	<h1>My Todos</h1>
-	<input type="text" bind:value={text} placeholder="Enter a todo" />
-	<button on:click={addTodo}>Add Todo</button>
-	<br />
-	<ul>
-		{#each todos as todo}
-			<li>
-				<input type="checkbox" bind:checked={todo.completed} on:change={completeTodo(todo)} />
-				{todo.text}
-			</li>
-		{/each}
-	</ul>
-</main>

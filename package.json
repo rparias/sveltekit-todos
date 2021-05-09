@@ -33,9 +33,21 @@
 	},
 	"lint-staged": {
 		"*.{js,css,md}": "prettier --write",
-		"*.js": ["prettier --write", "eslint --cache --fix"],
-		"*.cjs": ["prettier --write", "eslint --fix"],
-		"*.ts": ["prettier --write", "eslint --fix"],
-		"*.svelte": ["prettier --write", "eslint --fix", "stylelint --fix"]
+		"*.js": [
+			"prettier --write",
+			"eslint --cache --fix"
+		],
+		"*.cjs": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"*.ts": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"*.svelte": [
+			"prettier --write",
+			"eslint --fix"
+		]
 	}
 }
