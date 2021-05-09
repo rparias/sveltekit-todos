@@ -4,7 +4,9 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 ## Run the project
 
-A mongodb docker container is used for this project. You can create a database called 'sveltekit-todo' and a collection called 'sveltekit-todos';
+A mongodb docker container is used for this project. You can create a database called 'sveltekit-todo' and a collection called 'sveltekit-todos'
+
+**You should create a folder called datadir on the root project.**
 
 ```bash
 # create a docker container with mongodb
