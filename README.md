@@ -16,3 +16,5 @@ npm run dev
 
 The docker image running mongo express is available on port 8081.
 You can see the database GUI on: http://localhost:8081/db/sveltekit-todo/sveltekit-todos
+
+This repo was created following the [Brayden Girard](https://www.youtube.com/watch?v=P6gEnVlJPOc) video on YouTube.
