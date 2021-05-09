@@ -10,5 +10,9 @@
     "@sveltejs/kit": "next",
     "svelte": "^3.34.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^9.0.0",
+    "mongodb": "^3.6.6"
+  }
 }
