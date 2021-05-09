@@ -32,7 +32,10 @@
 		"mongodb": "^3.6.6"
 	},
 	"lint-staged": {
-		"*.js": "eslint --cache --fix",
-		"*.{js,css,md}": "prettier --write"
+		"*.{js,css,md}": "prettier --write",
+		"*.js": ["prettier --write", "eslint --cache --fix"],
+		"*.cjs": ["prettier --write", "eslint --fix"],
+		"*.ts": ["prettier --write", "eslint --fix"],
+		"*.svelte": ["prettier --write", "eslint --fix", "stylelint --fix"]
 	}
 }
