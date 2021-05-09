@@ -6,7 +6,8 @@
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
 		"lint": "prettier --check . && eslint --ignore-path .gitignore .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "next",
@@ -15,6 +16,8 @@
 		"eslint": "^7.22.0",
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-svelte3": "^3.2.0",
+		"husky": "^6.0.0",
+		"lint-staged": "^11.0.0",
 		"postcss": "^8.2.10",
 		"postcss-load-config": "^3.0.1",
 		"prettier": "~2.2.1",
@@ -27,5 +30,9 @@
 	"dependencies": {
 		"dotenv": "^9.0.0",
 		"mongodb": "^3.6.6"
+	},
+	"lint-staged": {
+		"*.js": "eslint --cache --fix",
+		"*.{js,css,md}": "prettier --write"
 	}
 }
